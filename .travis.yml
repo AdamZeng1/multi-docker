@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build zengweihan/client-test -f ./client/Dockerfile.dev ./client
+  - docker build -t zengweihan/client-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run zengweihan/client-test npm test -- --coverage
